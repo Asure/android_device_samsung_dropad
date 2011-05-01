@@ -1,0 +1,38 @@
+
+/dev/pvrsrvkm             0666   system     system
+/dev/video0               0660   system     camera
+/dev/video1               0660   system     camera
+/dev/video2               0660   system     camera
+/dev/video14              0660   system     system
+/dev/video21              0660   system     system
+/dev/video22              0660   system     system
+
+/dev/s3c-jpg              0660   system     camera
+/dev/s3c-mem              0660   system     system
+/dev/s3c-mfc              0660   system     graphics
+
+# for TVOUT
+/dev/i2c-1		  0666   system	    system
+/dev/CEC		  0666   system	    system
+
+# for G2D
+/dev/sec-g2d		  0666   system	    system
+
+# for copybit
+/dev/pmem_gpu1            0660   system     graphics
+/dev/s3c_bc		  0660   system	    graphics
+
+# add by urbetter                                   
+/dev/mma7660              0666   system     system
+    
+/dev/snd/timer           0660   audio    audio 
+/dev/snd/controlC0       0660   audio    audio      
+/dev/snd/audio           0660   audio    audio
+
+/dev/snd/controlC0		0660   audio    audio 
+/dev/snd/pcmC0D0c		0660   audio    audio 
+/dev/snd/pcmC0D0p 		0660   audio    audio
+
+/dev/snd/controlC1		0660   audio    audio 
+/dev/snd/pcmC1D0p 		0660   audio    audio 
+/dev/snd/pcmC1D1c		0660   audio    audio 
