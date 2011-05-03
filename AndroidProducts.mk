@@ -18,4 +18,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/dropad.mk
+    $(LOCAL_DIR)/dropad.mk \
+    $(LOCAL_DIR)/cyanogen_dropad.mk
