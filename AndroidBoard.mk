@@ -20,28 +20,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-# Least specific includes go first, so that they can get
-# overridden further down
-
-#$(call add-radio-file,recovery/images/firmware_install.565)
-#$(call add-radio-file,recovery/images/firmware_error.565)
-#$(call add-radio-file,recovery/images/bitmap_size.txt)
 include $(CLEAR_VARS)
 
-# This will install the file in /system/etc
-#
-#include $(CLEAR_VARS)
-#LOCAL_MODULE_CLASS := ETC
-#LOCAL_MODULE := vold.fstab
-#LOCAL_SRC_FILES := $(LOCAL_MODULE)
-#include $(BUILD_PREBUILT)
-
 # include the non-open-source counterpart to this file
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/zImage
-endif
-
-file := $(INSTALLED_KERNEL_TARGET)
-ALL_PREBUILT += $(file)
-$(file): $(TARGET_PREBUILT_KERNEL) | $(ACP)
-$(transform-prebuilt-to-target)
+-include vendor/samsung/dropad/AndroidBoardVendor.mk

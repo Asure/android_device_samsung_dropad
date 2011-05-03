@@ -18,4 +18,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_dropad.mk
+    $(LOCAL_DIR)/dropad.mk
