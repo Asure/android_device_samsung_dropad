@@ -26,7 +26,7 @@
 
 PRODUCT_COPY_FILES += \
     device/samsung/dropad/init.smdkv210.rc:root/init.smdkv210.rc \
-    device/samsung/dropad/init.rc:root/init.rc \
+#    device/samsung/dropad/init.rc:root/init.rc \
     device/samsung/dropad/ueventd.smdkv210.rc:root/ueventd.smdkv210.rc
 
 ## (2) Also get non-open-source GSM-specific aspects if available
