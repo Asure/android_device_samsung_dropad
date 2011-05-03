@@ -63,6 +63,9 @@ BOARD_KERNEL_BASE := 0x20008000
 
 BOARD_EGL_CFG := device/samsung/dropad/egl.cfg
 
+# emmc storage (internal SD card partition, in fat32 format)
+BOARD_EMMC_DEVICE := /dev/block/mmcblk0p1
+
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00380000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00480000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x08c60000   # limited so we enforce room to grow
