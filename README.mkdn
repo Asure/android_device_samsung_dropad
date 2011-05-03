@@ -1,0 +1,49 @@
+Dropad A8 device for CM7.1.x
+============================
+
+What is it?
+-----------
+A work in progress device for the Samsung S5pv210-based Dropad A8 / Herotab C8 capacitive tablet.
+The factory software leaves a lot to be desired, and CM7 is pretty much the best out there, with the tablet tweaks that exits now!
+
+How do i build it?
+------------------
+Download the vendor-samsung-dropad stuff from my git as well. 
+Edit the files in /vendor/cyanogen to add this device to the build/selection. 
+Then you can do a 'brunch dropad' followed by a 'make' (ignore the 'no bacon' error.)
+(I will fuse it into my own vendorsetup later.)
+
+What is done so far?
+--------------------
+
+Stuff kanged from the vendor. Most of it needs testing, but we'll see how the initial build runs first, before jumping to conclusions :)
+
+    Alsa Audio
+    Camera
+    PowerVR/OpenGL drivers
+    Wifi
+    gralloc
+    copybit
+    OMX
+    secomxregistry
+    pvr init
+    vold
+    ueventd/rc?
+    wpa_supplicant (+conf)
+    keychars
+    keylayout
+    overlay
+    sensors (if any?)
+
+Remaining items / todo list
+---------------------------
+Needs testing. Really. A lot. It's a beta now. Expect nothing :)
+
+- We probably need to shrink the image. The /system & init area is only 108 MB ubifs/ext4 so any space gain is welcome.
+
+- We need to get rid of the themes being built always even if we disable them in the makefile..
+    PRODUCT_SPECIFIC_DEFINES += SKIP_THEMES=true
+The above seems not to work.(Even if compared to the vega makefile and putting it in the exact same position..)
+
+- ALSA audio switching. Original board calls a .sh script file to switch to HDMI audio.
+Figure out how to enable HDMI video output and set resolutions (hack setting.apk from original?)
