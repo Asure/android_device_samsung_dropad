@@ -54,7 +54,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.media.dec.jpeg.memcap=20000000 \
 	dalvik.vm.lockprof.threshold=500 \
 	dalvik.vm.dexopt-flags=m=y \
-	ro.sf.lcd_density=210
+	ro.sf.lcd_density=210 \
+	dalvik.vm.heapsize=32m
 
 DEVICE_PACKAGE_OVERLAYS += device/samsung/dropad/overlay
 
@@ -69,13 +70,32 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
-# media config xml file
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+        make_ext4fs \
+        setup_fs
+        
+# These are the OpenMAX IL modules
+PRODUCT_PACKAGES += \
+        libSEC_OMX_Core \
+        libOMX.SEC.AVC.Decoder \
+        libOMX.SEC.M4V.Decoder \
+        libOMX.SEC.M4V.Encoder \
+        libOMX.SEC.AVC.Encoder
+
+# OpenMAX IL media config xml file
 PRODUCT_COPY_FILES += \
     device/samsung/dropad/media_profiles.xml:system/etc/media_profiles.xml
 
+# Misc other modules
+PRODUCT_PACKAGES += \
+        overlay.s5pc110 \
+        libstagefrighthw
+
+
 
 # we have enough storage space to hold precise GC data
-# PRODUCT_TAGS += dalvik.gc.type-precise
+PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Passion uses high-density artwork where available
 PRODUCT_LOCALES += hdpi
@@ -111,7 +131,6 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, build/target/product/small_base.mk)
 
 #Add additional locales and set the en_US as default
-PRODUCT_LOCALES += en_CA en_IN en_NZ en_ZA fr_CA he_IL hi_IN id_ID ja_JP ko_KR nl_NL uk_UA vi_VN zh_CN zh_HK zh_TW
 PRODUCT_DEFAULT_LANGUAGE := en_US
 
 PRODUCT_NAME := generic_dropad
