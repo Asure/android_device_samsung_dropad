@@ -30,3 +30,8 @@ include $(CLEAR_VARS)
 
 # include the non-open-source counterpart to this file
 -include vendor/samsung/dropad/AndroidBoardVendor.mk
+
+#
+#-include device/samsung/crespo/sec_mm/Android.mk
+#-include device/samsung/crespo/liboverlay/Android.mk
+#-include device/samsung/crespo/libstagefrighthw/Android.mk

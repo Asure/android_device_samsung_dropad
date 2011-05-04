@@ -87,13 +87,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/samsung/dropad/media_profiles.xml:system/etc/media_profiles.xml
 
-# Misc other modules
-PRODUCT_PACKAGES += \
-        overlay.s5pc110 \
-        libstagefrighthw
-
-
-
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 

@@ -45,24 +45,18 @@ BOARD_USES_HGL := true
 BOARD_USES_OVERLAY := true
 DEFAULT_FB_NUM := 2
 
-TARGET_USERIMAGES_USE_EXT4 := true
-
 TARGET_BOOTLOADER_BOARD_NAME := dropad
 
 # Wifi related defines
-BOARD_WPA_SUPPLICANT_DRIVER := CUSTOM
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := libCustomWifi
+BOARD_WPA_SUPPLICANT_DRIVER := WEXT
 WPA_SUPPLICANT_VERSION      := VER_0_6_X
-BOARD_WLAN_DEVICE           := tiwlan0
-WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/tiwlan_drv.ko"
-BOARD_WLAN_TI_STA_DK_ROOT   := system/wlan/ti/wilink_6_1
+BOARD_WLAN_DEVICE           := wlan0
+WIFI_DRIVER_MODULE_PATH     := "system/lib/modules/ar6000.ko"
 WIFI_DRIVER_MODULE_ARG      := ""
-WIFI_DRIVER_MODULE_NAME     := "tiwlan_drv"
-WIFI_FIRMWARE_LOADER        := "wlan_loader"
+WIFI_DRIVER_MODULE_NAME     := "ar6000"
 
 BOARD_USES_GENERIC_AUDIO := false
 
-#BOARD_KERNEL_CMDLINE := console=ttyS2,115200n8 rw mem=244M@0x80C00000 init=/init ip=off brdrev=P3A_CDMA mtdparts=omap2-nand.0:640k@128k(mbm),384k@1408k(cdt),384k@3328k(lbl),384k@6272k(misc),3584k(boot),4608k(recovery),143744k(system),94848k(cache),268032k(userdata),2m(kpanic)
 BOARD_KERNEL_BASE := 0x20008000
 
 #BOARD_HAVE_BLUETOOTH := true
