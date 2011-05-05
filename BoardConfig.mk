@@ -67,6 +67,9 @@ BOARD_KERNEL_BASE := 0x20008000
 
 BOARD_EGL_CFG := device/samsung/dropad/egl.cfg
 
+# Internal SD card
+BOARD_HAS_SDCARD_INTERNAL := true
+
 # emmc storage (internal SD card partition, in fat32 format)
 BOARD_EMMC_DEVICE := /dev/block/mmcblk0p1
 
