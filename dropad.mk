@@ -34,27 +34,11 @@ $(call inherit-product-if-exists, vendor/samsung/dropad/dropad-vendor.mk)
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.com.android.wifi-watchlist=GoogleGuest \
-	ro.error.receiver.system.apps=com.google.android.feedback \
-	ro.setupwizard.enterprise_mode=1 \
-	ro.com.google.clientidbase=android-verizon \
-	ro.com.google.locationfeatures=1 \
-	ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
-	ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
-	ro.cdma.home.operator.numeric=310004 \
-	ro.cdma.home.operator.alpha=Verizon \
-	ro.cdma.homesystem=64,65,76,77,78,79,80,81,82,83 \
-	ro.cdma.data_retry_config=default_randomization=2000,0,0,120000,180000,540000,960000 \
-	ro.config.vc_call_vol_steps=7 \
-	ro.cdma.otaspnumschema=SELC,1,80,99 \
-	ro.telephony.call_ring.multiple=false \
-	ro.telephony.call_ring.delay=3000 \
-	ro.url.safetylegal=http://www.samsung.com/staticfiles/Support/legal/?model=A855 \
-	ro.setupwizard.enable_bypass=1 \
-	ro.media.dec.jpeg.memcap=20000000 \
 	dalvik.vm.lockprof.threshold=500 \
 	dalvik.vm.dexopt-flags=m=y \
-	ro.sf.lcd_density=210 \
+	ro.sf.lcd_density=200 \
+#	ro.sf.hwrotation=90 \
+	wifi.interface=wlan0 \
 	dalvik.vm.heapsize=32m
 
 DEVICE_PACKAGE_OVERLAYS += device/samsung/dropad/overlay
