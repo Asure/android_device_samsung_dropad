@@ -106,8 +106,8 @@ on fs
 #    mount ubifs ubi0:flash /system/mnt/flash nosuid nodev                                
 #    mount ubifs ubi0:cache /cache nosuid nodev
 
-    mount ext4 /dev/block/mmcblk0p3 /data nosuid nodev                        
-    mount ext4 /dev/block/mmcblk0p2 /cache nosuid nodev
+    mount ext4 /dev/block/mmcblk0p3 /data nosuid noatime nodiratime nodev
+    mount ext4 /dev/block/mmcblk0p2 /cache nosuid noatime nodiratime nodev
 
 on post-fs
     # once everything is setup, no need to modify /
