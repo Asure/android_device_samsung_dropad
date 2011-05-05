@@ -30,8 +30,9 @@ BUILD_WITH_ALSA_UTILS := true
 # inherit from the proprietary version
 -include vendor/samsung/dropad/BoardConfigVendor.mk
 
-TARGET_BOARD_PLATFORM := smdkv210
+TARGET_BOARD_PLATFORM := s5pc110
 TARGET_BOARD_PLATFORM_GPU := POWERVR_SGX540_120
+TARGET_BOOTLOADER_BOARD_NAME := dropad
 
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
@@ -46,7 +47,8 @@ BOARD_USES_HGL := true
 BOARD_USES_OVERLAY := true
 DEFAULT_FB_NUM := 2
 
-TARGET_BOOTLOADER_BOARD_NAME := dropad
+# Sec OMX Library
+WITH_SEC_OMX := true
 
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
