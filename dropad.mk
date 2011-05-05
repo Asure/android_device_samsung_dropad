@@ -39,6 +39,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density=200 \
 #	ro.sf.hwrotation=90 \
 	wifi.interface=wlan0 \
+	wifi.supplicant_scan_interval = 15 \
 	dalvik.vm.heapsize=32m
 
 DEVICE_PACKAGE_OVERLAYS += device/samsung/dropad/overlay

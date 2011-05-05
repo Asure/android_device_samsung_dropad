@@ -20,31 +20,29 @@ Stuff kanged from the vendor. Most of it needs testing, but we'll see how the in
 
     Alsa Audio
     Camera
-    PowerVR/OpenGL drivers
+    PowerVR/OpenGL drivers (ok!)
     Wifi
-    gralloc
-    copybit
+    gralloc (OK!)
+    copybit (OK!)
     OMX
     secomxregistry
-    pvr init
-    vold
-    ueventd/rc?
+    pvr init (OK!)
+    vold (OK! but need to add EMMC internal SD mount.)
+    ueventd/rc? (OK!)
     wpa_supplicant (+conf)
     keychars
     keylayout
     overlay
-    sensors (if any?)
+    sensors (Wrong layout for the sensors, need to adjust libsensor..)
+    Added: CM7 tablet tweaks and soft-buttons. Can be turned off. See CM Settings > Tablet Tweaks at the bottom.
 
 Remaining items / todo list
 ---------------------------
 Needs testing. Really. A lot. It's a beta now. Expect nothing :)
 
 Original ADB Bootlog: http://pastie.org/1861856
-Kanged ADB Bootlog: http://pastie.org/1861933
 
-Seems to have some problem with SurfaceFlinger/Egl stuff, but i don't understand why (yet.)
-
-- We probably need to shrink the image. The /system & init area is only 108 MB ubifs/ext4 so any space gain is welcome.
+- We probably need to shrink the image. The /system & init area is only 208 MB ubifs/ext4 so any space gain is welcome.
 
 - We need to get rid of the themes being built always even if we disable them in the makefile..
     PRODUCT_SPECIFIC_DEFINES += SKIP_THEMES=true
@@ -52,3 +50,10 @@ The above seems not to work.(Even if compared to the vega makefile and putting i
 
 - ALSA audio switching. Original board calls a .sh script file to switch to HDMI audio.
 Figure out how to enable HDMI video output and set resolutions (hack setting.apk from original?)
+
+- Adjust sensors (tilt is wrong)
+
+- Adjust wifi (won't properly init atm, reason unknown)
+
+- ALSA (needs fixing badly, angry birds with no sound makes me sad.
+
