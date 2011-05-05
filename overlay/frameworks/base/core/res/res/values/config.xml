@@ -23,7 +23,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- The duration (in milliseconds) that the radio will scan for a signal
          when there's no network connection. If the scan doesn't timeout, use zero -->
-    <integer name="config_radioScanningTimeout">1</integer>
+    <integer name="config_radioScanningTimeout">15</integer>
 
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">true</bool>
@@ -32,13 +32,13 @@
     <string name="config_datause_iface">wlan0</string>
 
     <!-- Configure rotary bottom margin -->
-    <integer name="config_rotaryMarginBottomDIP">60</integer>
+    <!-- <integer name="config_rotaryMarginBottomDIP">60</integer> -->
 
     <!-- Configure rotary outer radius -->
-    <integer name="config_rotaryOuterRadiusDIP">600</integer>
+    <!-- <integer name="config_rotaryOuterRadiusDIP">600</integer> -->
 
     <!-- Configure rotary stroke width -->
-    <integer name="config_rotaryStrokeWidthDIP">124</integer>
+    <!-- <integer name="config_rotaryStrokeWidthDIP">124</integer> -->
 
     <!-- toggles weather device is tablet or phone. right now,
     tablets are know to have soft buttons, but phones have harware
@@ -52,7 +52,7 @@
     <bool name="cm_default_has_soft_buttons">true</bool>
 
     <!-- if true, status bar is shown on bottom by default -->
-    <bool name="cm_default_bottom_status_bar">true</bool>
+    <bool name="cm_default_bottom_status_bar">false</bool>
 
     <!-- if true, dead zone is activated, which disables pull
     out of the status bar on the middle area - i.e. for people
@@ -62,7 +62,7 @@
 
     <!-- if true, soft buttons shown on left, false show them on
     right side of status bar -->
-    <bool name="cm_default_soft_buttons_left">true</bool>
+    <bool name="cm_default_soft_buttons_left">false</bool>
 
     <!-- toggle which buttons to show if soft buttons enabled
     quickna: opens notification area with the press of one button
@@ -70,8 +70,8 @@
     <bool name="cm_default_show_soft_home">true</bool>
     <bool name="cm_default_show_soft_menu">true</bool>
     <bool name="cm_default_show_soft_back">true</bool>
-    <bool name="cm_default_show_soft_search">true</bool>
-    <bool name="cm_default_show_soft_quick_na">true</bool>
+    <bool name="cm_default_show_soft_search">false</bool>
+    <bool name="cm_default_show_soft_quick_na">false</bool>
 
     <!-- toggles which button to use to unhide the status bar
     to show soft buttons again (see last comment). this is an
