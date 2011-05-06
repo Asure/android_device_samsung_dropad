@@ -24,8 +24,9 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 USE_CAMERA_STUB := true
-BOARD_USES_ALSA_AUDIO := true
-BUILD_WITH_ALSA_UTILS := true
+#BOARD_USES_ALSA_AUDIO := true
+#BUILD_WITH_ALSA_UTILS := true
+BOARD_USES_DROPAD_AUDIO := true
 
 # inherit from the proprietary version
 -include vendor/samsung/dropad/BoardConfigVendor.mk
