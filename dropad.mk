@@ -70,7 +70,12 @@ PRODUCT_PACKAGES += \
 
 # OpenMAX IL media config xml file
 PRODUCT_COPY_FILES += \
+    device/samsung/dropad/sec_mm/sec_omx/sec_omx_core/secomxregistry:system/etc/secomxregistry \
     device/samsung/dropad/media_profiles.xml:system/etc/media_profiles.xml
+
+PRODUCT_PACKAGES += \
+        libstagefrighthw \
+        overlay.s5pc110
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
